@@ -34,7 +34,6 @@ public class Vanish extends JavaPlugin implements Listener {
     public void checkIfNeedToVanish(PlayerLoginEvent event)
     {
         Player p = event.getPlayer();
-        Bukkit.getLogger().info("Hostname : "+event.getHostname());
         if(!p.hasPermission("is.mod")) return;
         if(!event.getHostname().toLowerCase().startsWith("vanish")) return;
         toHide.add(p.getUniqueId());
